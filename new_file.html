@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+	</head>
+	<style>
+		.clearfix:before, .clearfix:after {
+			display: table;
+		    content: "";
+		    line-height: 0;
+		}
+		* {
+			margin:0;
+			padding:0;
+		}
+		ul li {
+			list-style-type:none;
+		}
+		#index_main {
+			width:1200px;
+			margin:0 auto;
+		}
+		#main_1 > div {
+			text-align: center;
+		}
+		#main_1 > div > h3 {
+			display:inline-block;
+			border-bottom:2px solid #f1712a;
+			width:auto;
+			font-weight:bold;
+		    padding-bottom: 5px;
+		}
+		#main_1 li {
+			position:relative;
+			padding:30px;
+			background:#e9edf0;
+			text-align: center;
+			box-sizing:border-box;
+			margin-right:53px;
+			float:left;
+			width:calc(25% - 40px);
+			width:-moz-calc(25% - 40px);
+			width:-webkit-calc(25% - 40px);
+		}
+		#main_1 li > img {width:75%;}
+		#main_1 li:after {
+			display:inline-block;
+			content:"";
+			position:absolute;
+			right:calc((-53px/2 - 15px) + 8px);
+			right:-moz-calc((-53px/2 - 15px) + 8px);
+			right:-webkit-calc((-53px/2 - 15px) + 8px);
+			top:50%;
+			margin-top:-23px;
+			background:url(img/arror.png);
+			width:16px;
+			height:46px;
+		}
+		#main_1 li:last-child:after {
+			background:none;
+			width:0;
+		}
+		#main_1 li p {
+			margin:10px 0;
+			color: #f28f2a;
+		}
+		#main_1 li:last-child {
+			margin-right:0;
+		}
+		@media screen and (max-width:1200px) {
+			#index_main {
+				width:auto;
+				margin:0 auto;
+			}
+		}
+		@media screen and (max-width:768px) {
+			#main_1 ul {
+				margin-left:0;
+			}
+			#main_1 li {
+				float:none;
+				margin:0 auto 40px auto;
+				width:50%;
+				padding:15px;
+			}
+			#main_1 li:after {
+				left:auto;
+				right:auto;
+				bottom:calc((-40px/2 - 15px) + -8px);
+				bottom:-moz-calc((-40px/2 - 15px) + -8px);
+				bottom:-webkit-calc((-40px/2 - 15px) + -8px);
+				transform: rotate(90deg);
+				margin-top:auto;
+				margin-left:-8px;
+			}
+			#main_1 li:last-child {
+				margin:auto;
+			}
+		}
+		
+		
+		#main_2 > ul {
+			border:0;
+			margin-bottom:15px;
+			margin-left:0;
+			margin-right:0;
+		}
+		#main_2 > ul > li {
+			text-align: center;
+			box-sizing:border-box;
+		}
+		#main_2 > ul > li:first-child {
+			text-align:right;
+			padding-right:27px;
+		}
+		#main_2 > ul > li:last-child {
+			text-align:left;
+			padding-left:27px;
+		}
+		#main_2 > ul > li a {
+			display: inline-block;
+			width:auto;
+			border-width:0 0 2px 0;
+			border-color: #f1712a;
+			font-weight: bold;
+			color:#000;
+			font-size:24px;
+			padding:15px 0 5px 0;
+		}
+		#main_2 > ul > li a:hover {
+			background:#fff;
+		}
+		#main_2 > div > div.row {
+			margin-left:0;
+			margin-right:0;
+		}
+		#our_Ad {
+			background:#e9edf0;	
+		}
+		.our_Ad_lg {
+			padding:25px;
+		}
+		.our_Ad_lg > div {
+			padding:0;
+		}
+		.our_Ad_lg #main_ad_lg_slide {
+			width:496px;
+			height:835px;
+			background:url(img/main2_bg.png);
+			padding: 100px 32px;
+			float:right;
+		}
+		.our_Ad_lg #main_ad_lg_slide > div {
+			position:relative;
+			right:-2px;
+		}
+		.our_Ad_lg .our_Ad_lg_circle {
+			width:720px;
+			height:720px;
+			border:2px solid #f1712a;
+			border-radius:0 100% 100% 0;
+			margin-left:-375px;
+		    position: absolute;
+    		top: 65px;
+		}
+		.our_Ad_lg > div:first-child {
+			z-index:9999;
+		}
+		#our_Ad_lg_caozuo {
+			position: initial;
+		}
+		#our_Ad_lg_caozuo li {
+			width:auto;
+			height:auto;
+			text-indent:inherit;
+			border:none;
+			border-radius:inherit;
+			background:none;
+			position:absolute;
+			margin:0;
+			font-size:16px;
+		}
+		#our_Ad_lg_caozuo li:nth-child(1){
+		    top: 115px;
+    		right: -284px;
+		}
+		#our_Ad_lg_caozuo li:nth-child(2){
+		    top: 293px;
+    		right: -413px;
+		}
+		#our_Ad_lg_caozuo li:nth-child(3){
+		    top: 496px;
+    		right: -419px;
+		}
+		#our_Ad_lg_caozuo li:nth-child(4){
+		    top: 695px;
+    		right: -285px;
+		}
+		.our_Ad_lg #our_Ad_lg_caozuo li a {
+			color: #777;
+			font-weight: bold;
+		}
+		.our_Ad_lg #our_Ad_lg_caozuo li a:hover {
+			text-decoration:none;
+		}
+		.our_Ad_lg #our_Ad_lg_caozuo li.active a {
+			color:#f1712a;
+		}
+		.our_Ad_lg #our_Ad_lg_caozuo li > i {
+			display:inline-block;
+			width:25px;
+			height:25px;
+			background:#f1712a;
+			margin-right:5px;
+			border-radius:100%;
+			position:relative;
+			top:7px;
+		}
+		.our_Ad_lg #our_Ad_lg_caozuo li.active div.ppp {
+			opacity:1;
+		}
+		.ppp {
+	        position: absolute;
+	        background:#f1712a;
+	        color: #fff;
+	        padding:15px;
+	        border-radius:4px;
+	        opacity:0;
+	        transition: all 0.5s;
+	        font-size:14px;
+		}
+		.ppp > i.ppp_arrow {
+	        display: inline-block;
+	        width: 0;
+		    height: 0;
+		    border-left: 11px solid transparent;
+		    border-right: 11px solid transparent;
+		    border-bottom: 11px solid #f1712a;
+		    top:-11px;
+		    position:absolute;
+		}
+		#our_ad > div {
+			padding: 15px;
+		}
+		#our_ad > div img {
+			width:100%;
+		}
+		#our_ad > div > ul {
+			margin:25px 0;
+		}
+		#our_ad > div > ul li {
+			margin-bottom:10px;
+		}
+		
+		
+		
+		.our_Ad_mob {
+			padding:25px;
+		}
+		.our_Ad_mob h4 {
+			color:#f1712a;
+		}
+		.our_Ad_mob > div {
+			padding:15px 0;
+			border-bottom:2px dashed #f1712a;
+		}
+		.our_Ad_mob > div:last-child {
+			border-bottom:0;
+		}
+		.our_Ad_mob > div > div img {
+			width:initial;
+		}
+	</style>
+	<body>
+		
+		<div id="index_main">
+			<div id="main_1">
+				<div><h3>合作流程</h3></div>
+				<ul class="clearfix">
+					<li><img src="img/process1.png" /><p>STEP1 注册会员</p></li>
+					<li><img src="img/process2.png" /><p>STEP2 获取代码</p></li>
+					<li><img src="img/process3.png" /><p>STEP3 投放广告</p></li>
+					<li><img src="img/process4.png" /><p>STEP4 结算佣金</p></li>
+				</ul>
+			</div>
+			<div id="main_2">
+				<ul class="nav nav-tabs row" role="tablist">
+				    <li role="presentation" class="col-md-6 col-sm-6 col-xs-6 active"><a href="#our_Ad" aria-controls="our_Ad" role="tab" data-toggle="tab">我们的广告</a></li>
+				    <li role="presentation" class="col-md-6 col-sm-6 col-xs-6"><a href="#our_ad" aria-controls="our_ad" role="tab" data-toggle="tab">我们的优势</a></li>
+			  	</ul>
+			  	<div class="tab-content">
+				    <div role="tabpanel" class="row tab-pane fade in active" id="our_Ad">
+				    	<div class="our_Ad_lg visible-lg-block clearfix">
+				    		
+				    		<div class="col-md-6">
+				    			<div id="main_ad_lg_slide" class="carousel slide" data-ride="carousel">
+								  <!-- Wrapper for slides -->
+								  <div class="carousel-inner" role="listbox">
+								    <div class="item active">
+								    	<img src="img/ad_slide2.jpg">
+								    </div>
+								    <div class="item">
+								    	<img src="img/ad_slide1.jpg">
+								    </div>
+								    <div class="item">
+								    	<img src="img/ad_slide3.jpg">
+								    </div>
+								    <div class="item">
+								    	<img src="img/ad_slide4.jpg">
+								    </div>
+								  </div>
+								  
+								    <ul id="our_Ad_lg_caozuo" class="carousel-indicators">
+									    <li data-target="#main_ad_lg_slide" data-slide-to="0" class="active">
+									    	<i></i>
+									    	<a>插屏广告</a>
+									    	<div class="ppp" style="width:315px;top:45px;right:-208px;">
+									    		<i class="ppp_arrow" style="left:20%;"></i>
+									    		<div class="ppp_content">插屏广告是一种新兴的广告形式，一般在网页中间或全屏形式插入广告，插屏广告采用了自动广告适配和缓存优化技术，用户可自己定义“全屏展示”“半屏展示”，点击率较高。</div>
+									    	</div>
+									    </li>
+									    <li data-target="#main_ad_lg_slide" data-slide-to="1">
+									    	<i></i>
+									    	<a>通栏广告</a>
+									    	<div class="ppp" style="width:250px;top:45px;right:-157px;">
+									    		<i class="ppp_arrow" style="left:20%;"></i>
+									    		<div class="ppp_content">即横幅广告条，是在一个手机网站的顶部或是底部区域内固定展示广告，点击广告之后会有 跳转到手机网页、下载手机应用。</div>
+									    	</div>
+									    </li>
+									    <li data-target="#main_ad_lg_slide" data-slide-to="2">
+									    	<i></i>
+									    	<a>弹窗广告</a>
+									    	<div class="ppp" style="width:250px;top:45px;right:-157px;">
+									    		<i class="ppp_arrow" style="left:20%;"></i>
+									    		<div class="ppp_content">弹窗广告是指打开网站后自动弹出的广告， 弹窗广告是互联网上最古老也最常用的网络推广形式之一，广泛的应用于网站 、企业的产品快速推广和宣传。</div>
+									    	</div>
+									    </li>
+									    <li data-target="#main_ad_lg_slide" data-slide-to="3">
+									    	<i></i>
+									    	<a>图文广告</a>
+									    	<div class="ppp" style="width:255px;top:45px;right:-160px;">
+									    		<i class="ppp_arrow" style="left:20%;"></i>
+									    		<div class="ppp_content">图文混排是一种按文字和图片混排的广告形式，达到更好的展示效果。</div>
+									    	</div>
+									    </li>
+								  	</ul>
+								</div>
+				    		</div>
+				    		<div class="col-md-6">
+				    			<div class="our_Ad_lg_circle"></div>
+				    		</div>
+				    		
+				    		
+				    	</div>
+				    	<div class="our_Ad_mob hidden-lg">
+				    		<div class="clearfix">
+				    			<div class="col-md-6 col-xs-12" style="text-align: center;"><img src="img/ad_mob_slide1.png" /></div>
+				    			<div class="col-md-6 col-xs-12"><h4>插屏广告</h4><p>插屏广告是一种新兴的广告形式，一般在网页中间或全屏形式插入广告，插屏广告采用了自动广告适配和缓存优化技术，用户可自己定义“全屏展示”“半屏展示”，点击率较高。</p></div>
+				    		</div>
+				    		<div class="clearfix">
+				    			<div class="col-md-6 col-xs-12"><h4>通栏广告</h4><p>即横幅广告条，是在一个手机网站的顶部或是底部区域内固定展示广告，点击广告之后会有 跳转到手机网页、下载手机应用。</p></div>
+				    			<div class="col-md-6 col-xs-12" style="text-align: center;"><img src="img/ad_mob_slide1.png" /></div>
+				    		</div>
+				    		<div class="clearfix">
+				    			<div class="col-md-6 col-xs-12" style="text-align: center;"><img src="img/ad_mob_slide1.png" /></div>
+				    			<div class="col-md-6 col-xs-12"><h4>弹窗广告</h4><p>弹窗广告是指打开网站后自动弹出的广告， 弹窗广告是互联网上最古老也最常用的网络推广形式之一，广泛的应用于网站 、企业的产品快速推广和宣传。</p></div>
+				    		</div>
+				    		<div class="clearfix">
+				    			<div class="col-md-6 col-xs-12"><h4>图文广告</h4><p>图文混排是一种按文字和图片混排的广告形式，达到更好的展示效果。</p></div>
+				    			<div class="col-md-6 col-xs-12" style="text-align: center;"><img src="img/ad_mob_slide1.png" /></div>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div role="tabpanel" class="row tab-pane fade" id="our_ad">
+				    	<div class="col-md-12"><img src="img/our_ad_lbanner.jpg" /></div>
+				    	<div class="col-md-6">
+				    		<ul>
+				    			<li>
+				    				<h4>丰富的资源</h4>
+				    				<p>与众多渠道建立紧密合作关系拥有全覆盖的互联网广告流量资源！</p>
+				    			</li>
+				    			<li>
+				    				<h4>强大的技术优势</h4>
+				    				<p>业内资深专家及知名工程师组成的核心研发团队打造技术领先的互联网广告平台！</p>
+				    			</li>
+				    			<li>
+				    				<h4>智能的数据分析</h4>
+				    				<p>智能优化的广告效果数据分析洞悉实时投放效果及行业发展动向！</p>
+				    			</li>
+				    		</ul>
+				    		<p><img src="img/our_ad_2.jpg" /></p>
+				    	</div>
+				    	<div class="col-md-6">
+				    		<p><img src="img/our_ad_1.jpg" /></p>
+				    		<ul>
+				    			<li>
+				    				<h4>超高的收益回报</h4>
+				    				<p>覆盖各行业众多广告主精确定位精准投放高点击高单价超高收益回报</p>
+				    			</li>
+				    			<li>
+				    				<h4>及时的付款周期</h4>
+				    				<p>每周都会提取佣金向开发人员付款保证开发人员的收入能及时到账</p>
+				    			</li>
+				    			<li>
+				    				<h4>贴心周到的服务</h4>
+				    				<p>广告联盟为开发者提供贴心周到的服务保证客服人员的专业服务和响应及时！</p>
+				    			</li>
+				    		</ul>
+				    	</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div id="footer_main_shild">
+		<div id="footer" class="row">
+			<div class="col-lg-3 clearfix visible-lg-block">
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-4 clearfix"><!--col-md-offset-1 col-sm-offset-1-->
+				<p>媒介合作</p>
+				<ul>
+					<li><a href="tencent://message/?uin=2881615004&Site=POPO&Menu=yes" mob-data="mqq://im/chat?chat_type=wpa&uin=2881615004&version=1&src_type=web">悟空：<i></i>2881615004</a></li>
+					<li><a href="tencent://message/?uin=2881615001&Site=POPO&Menu=yes" mob-data="mqq://im/chat?chat_type=wpa&uin=2881615001&version=1&src_type=web">八戒：<i></i>2881615001</a></li>
+					<li><a href="tencent://message/?uin=2881615013&Site=POPO&Menu=yes" mob-data="mqq://im/chat?chat_type=wpa&uin=2881615013&version=1&src_type=web">悟净：<i></i>2881615013</a></li><!--
+					<li><a href="tencent://message/?uin=3409155061&Site=POPO&Menu=yes">凯凯：<i></i>3409155061</a></li>
+					<li><a href="tencent://message/?uin=1906780702&Site=POPO&Menu=yes">指尖：<i></i>1906780702</a></li>
+					<li><a href="tencent://message/?uin=3454244726&Site=POPO&Menu=yes">提莫：<i></i>3454244726</a></li>
+					<li><a href="tencent://message/?uin=3492914467&Site=POPO&Menu=yes">小钟：<i></i>3492914467</a></li>
+					<li><a href="tencent://message/?uin=2725431255&Site=POPO&Menu=yes">小哲：<i></i>2725431255</a></li>
+					<li><a href="tencent://message/?uin=3072386917&Site=POPO&Menu=yes">小刚：<i></i>3072386917</a></li>-->
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-4 clearfix"><!--col-md-offset-1 col-sm-offset-1-->
+				<p>商务合作</p>
+				<ul>
+					<li><a href="tencent://message/?uin=2355657055&Site=POPO&Menu=yes" mob-data="mqq://im/chat?chat_type=wpa&uin=2881615015&version=1&src_type=web">哪吒：<i></i>2881615015</a></li>
+					<li><a href="tencent://message/?uin=2355657047&Site=POPO&Menu=yes" mob-data="mqq://im/chat?chat_type=wpa&uin=2881615016&version=1&src_type=web">杨戬：<i></i>2881615016</a></li>
+					<li><a href="tencent://message/?uin=2355657057&Site=POPO&Menu=yes" mob-data="mqq://im/chat?chat_type=wpa&uin=2881615017&version=1&src_type=web">雷震子：<i></i>2881615017</a></li>
+					<!--<li><a href="tencent://message/?uin=2355657053&Site=POPO&Menu=yes">小胜：<i></i>2355657053</a></li>-->
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-4 clearfix">
+				<p>投诉建议：service@aimilm.com</p>
+			</div>
+		</div>
+	</div>
+		
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    	$('#our_Ad_lg_caozuo li a').popover();
+	    var browser = {
+    versions: function() {
+      var u = navigator.userAgent,
+        app = navigator.appVersion;
+      return { //移动终端浏览器版本信息
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+        iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+        iPad: u.indexOf('iPad') > -1, //是否iPad
+      };
+    }(),
+  }
+  if(browser.versions.ios || browser.versions.android) {
+    var a = $("#footer ul a");
+    for(var i=0;i<a.length;i++){
+    	$(a[i]).attr('href',$(a[i]).attr('mob-data'));
+    }
+  }
+    </script>
+	</body>
+</html>
